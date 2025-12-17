@@ -1,0 +1,14 @@
+public int[] modifyArray(int[] nums, int value)
+{
+
+    for (int j=0;j<nums.length;j++)
+    {
+        if (nums[j]!=value)
+        {
+            nums[i]=nums[j];
+            i++;
+        }
+    }
+
+    return i;
+}

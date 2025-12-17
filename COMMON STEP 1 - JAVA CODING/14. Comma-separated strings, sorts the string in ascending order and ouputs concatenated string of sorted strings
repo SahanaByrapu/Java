@@ -1,0 +1,7 @@
+public String sortStrings(String Input)
+{
+ String[] stringlist=Input.split(",");
+ Arrays.sort(stringlist);
+ return String.join("",stringlist);
+
+}

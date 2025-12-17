@@ -1,0 +1,17 @@
+public void checkifArmstrong(int num)
+{
+    int digits=String.valueOf(num).length();
+    int sum=0;
+    int original=num;
+
+    while(num>0)
+    {
+        int r=num%10;
+        sum+=Math.pow(r,digits);
+        num=num/10;
+    }
+
+    if(sum==original)
+      System.out.print("Armstrong!");
+    
+}

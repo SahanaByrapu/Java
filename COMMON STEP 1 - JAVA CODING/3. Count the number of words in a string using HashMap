@@ -1,0 +1,11 @@
+public int countWords(String str)
+{
+    HashMap<String,Integer> hmap=new HashMap<>();
+
+    String[] words=str.split("\\s+");
+
+    for( String word:words )
+        hmap.put(word,hmap.getorDefault(word,0)+1);
+
+    return hmap;
+}

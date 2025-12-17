@@ -1,0 +1,18 @@
+public boolean checkifStringIsGood(String str)
+{
+
+    int []count=new int[26];
+    int frequency=0;
+    for(int i=0;i<26;i++)
+    {
+
+       count[str.charAt(i)-97]+=1;
+       
+       if(frequency==0) frequency=count[str.charAt(i)-97];
+
+       else if(frequency!= count[str.charAt(i)-97])
+         return false;
+    }
+
+    return true;
+}

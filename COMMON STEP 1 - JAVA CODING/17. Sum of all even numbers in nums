@@ -1,0 +1,30 @@
+public int[] sumOfNums(int [] nums, int [][] queries)
+{
+    int sumofeven=0;
+
+     for(int i=0;i<nums.length;i++)
+     {
+        if(nums[i]%2==0)
+          sumofeven+=nums[i];
+     }
+
+    int [] result=new int[queries.length];
+
+    for(int i=0;i<queries.length;i++)
+    {
+        int value=queries[i][0];
+        int index=queries[i][1];
+
+        if(nums[index]%2==0)
+            sumofeven-=nums[index];
+
+        nums[index]+=value;
+        
+        if(nums[index]%2==0)
+         sumofeven+=nums[index];
+
+         result[i]=sumofeven;
+    }
+
+    return result;
+}
